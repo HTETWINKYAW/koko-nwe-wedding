@@ -509,7 +509,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = document.getElementById('audio-control');
         const playIcon = document.getElementById('play-icon');
         const pauseIcon = document.getElementById('pause-icon');
-        let isPlaying = false;
+        let isPlaying = true;
+        audio.play().catch(e => console.log("Audio play blocked", e));
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+        btn.classList.add('playing');
 
         if (btn) {
             btn.hidden = false;

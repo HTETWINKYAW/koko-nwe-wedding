@@ -65,6 +65,6 @@
         "enabled": true,
         "loop": true,
         "volume": 0.9,
-        "audioUrl": "https://youtu.be/4x_UYIlPk54?si=BtR1sPXJZYzpCjeV"
+        "audioUrl": "./media/song.mp3"
     }
 }
