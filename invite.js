@@ -102,7 +102,7 @@ function startCountdown(data) {
     if (!container) return;
 
     const dt = data.datetime || {};
-    const target = dt.__start; // use only normalized start
+    const target = new Date(dt.__start); // use only normalized start
 
     if (!target || target <= new Date()) {
         container.hidden = true;
@@ -509,11 +509,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = document.getElementById('audio-control');
         const playIcon = document.getElementById('play-icon');
         const pauseIcon = document.getElementById('pause-icon');
-        let isPlaying = true;
-        audio.play().catch(e => console.log("Audio play blocked", e));
-        playIcon.style.display = 'none';
-        pauseIcon.style.display = 'block';
-        btn.classList.add('playing');
+        let isPlaying = false;
 
         if (btn) {
             btn.hidden = false;
