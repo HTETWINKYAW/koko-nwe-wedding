@@ -18,7 +18,8 @@
         "startTime": "11:00 AM",
         "startTimeMyan": "နံနက် (11:00) နာရီ မှ ညနေ (3:00) နာရီအထိ",
         "timezone": "local",
-        "allDay": false
+        "allDay": false,
+        "__start": "2026-05-03T11:00:00+09:00"
     },
     "location": {
         "name": "SAKURA Khit",
